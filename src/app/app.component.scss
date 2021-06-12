@@ -1,0 +1,28 @@
+
+.sidenav-controls {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  height: 100px;
+  width: 100px;
+
+  &:hover button {
+    transform: scale(1.3);
+    transition: all 300ms ease-in-out;
+  }
+
+  button {
+    transform: scale(0);
+    transition: all 300ms ease-in-out;
+
+    i {
+      color: var(--accent);
+    }
+  }
+
+}
+
+

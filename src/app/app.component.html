@@ -1,17 +1,15 @@
 <mat-drawer-container hasBackdrop="true" class="sidenav">
   <mat-drawer #drawer mode="over" position="end">
     <div class="sidenav-box">
-      <a href="">Home</a>
-      <a href="">Servizi</a>
-      <a href="">Chi siamo</a>
-      <a href="">Contatti</a>
+      <a routerLink="homepage" (click)="drawer.close()">Home</a>
+      <a routerLink="services" (click)="drawer.close()">Servizi</a>
+      <a routerLink="about" (click)="drawer.close()">Chi siamo</a>
+      <a routerLink="contacts" (click)="drawer.close()">Contatti</a>
     </div>
   </mat-drawer>
   <mat-drawer-content>
-    <div class="sidenav-controls">
-      <button mat-icon-button (click)="drawer.open()">
-        <i class="fas fa-bars fa-2x"></i>
-      </button>
+    <div class="side-controls">
+      <i class="fas fa-chevron-left fa-3x hint-icon" (click)="drawer.open()"></i>
     </div>
     <router-outlet></router-outlet>
   </mat-drawer-content>

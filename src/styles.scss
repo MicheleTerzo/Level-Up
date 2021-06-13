@@ -43,11 +43,13 @@ $level-up-fe-theme: mat-light-theme((
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 p, h1, h2, h3, h4, h5, h6, ul, li {
   padding: 0 !important;
   margin: 0 !important;
+
 }
 
 html, body {
@@ -59,10 +61,13 @@ body {
   margin: 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
+
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
   display: none;
 }
+
 a {
   text-decoration: none;
 }

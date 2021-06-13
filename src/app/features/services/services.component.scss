@@ -1,0 +1,15 @@
+.debug {
+  border: 1px solid red;
+}
+
+.container-fluid {
+  height: 50vh;
+
+  .row {
+    height: 100%;
+
+    .col-3 {
+      height: 100%;
+    }
+  }
+}

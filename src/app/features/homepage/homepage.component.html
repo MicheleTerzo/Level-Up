@@ -1,14 +1,16 @@
 <div class="slide-container" id="slider">
-  <div class="slider-controls">
-    <div class="container-fluid mt-5">
-      <div class="row p-3">
-        <div class="col-12 ">
-          <i class="fas fa-arrow-left fa-4x" (click)="scrollLeft()"></i>
-          <i class="fas fa-arrow-right fa-4x" (click)="scrollRight()"></i>
-        </div>
+
+  <!--CONTROLLI SLIDER -->
+  <div class="container-fluid mt-5 mt-sm-3 slider-controls">
+    <div class="row p-3">
+      <div class="col-12">
+        <i class="fas fa-arrow-left control-icon" (click)="scrollLeft()"></i>
+        <i class="fas fa-arrow-right control-icon" (click)="scrollRight()"></i>
       </div>
     </div>
   </div>
+
+  <!--  LANDING -->
   <div class="slide" id="lp">
     <div class="landing">
       <div class="logo-container">
@@ -19,6 +21,8 @@
       </div>
     </div>
   </div>
+
+  <!--  WHY US -->
   <div class="slide" id="sp-1">
     <div class=" why-us">
       <div class="content-box p-5">
@@ -36,10 +40,14 @@
     </div>
     <div class="why-us-bg"></div>
   </div>
+
+  <!--  SERVIZI PRINCIPALI -->
   <div class="slide" id="sp-2">
     <div class="container-fluid services">
       <div class="row">
-        <div class="col-4 service-container p-5">
+
+
+        <div class="col-sm-12 col-md-12 col-xl-6 col-xxl-4 service-container p-5">
           <div cards="scale-in">
             <div class="content-top p-3">
               <h1>Consulenza</h1>
@@ -53,7 +61,9 @@
             </a>
           </div>
         </div>
-        <div class="col-4 service-container p-5">
+
+
+        <div class="col-sm-12 col-md-12 col-xl-6 col-xxl-4 service-container p-5">
           <div cards="scale-in">
             <div class="content-top p-3">
               <h1>Software Gestionale</h1>
@@ -67,7 +77,9 @@
             </a>
           </div>
         </div>
-        <div class="col-4 service-container p-5">
+
+
+        <div class="col-sm-12 col-md-12 col-xl-12 col-xxl-4 service-container p-5">
           <div cards="scale-in">
             <div class="content-top p-3">
               <h1>E-Commerce</h1>
@@ -82,10 +94,13 @@
           </div>
         </div>
       </div>
+
       <div class="row">
+
         <a class="col-12 services-discover" routerLink="services">
           Scopri tutti i nostri servizi
         </a>
+
       </div>
     </div>
   </div>

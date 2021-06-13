@@ -7,6 +7,9 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
+  screenHeight: number;
+  screenWidth: number;
+  slider: HTMLElement;
 
   constructor() {
   }
@@ -26,15 +29,37 @@ export class HomepageComponent implements OnInit {
     ELs_inViewport.forEach(EL => {
       Obs.observe(EL);
     });
+    this.slider = document.getElementById('slider');
+    this.screenHeight = screen.height;
+    this.screenWidth = screen.width;
+    console.log('WIDTH', this.screenWidth, 'HEIGHT', this.screenHeight);
   }
 
   scrollRight(): void {
-    const slider = document.getElementById('slider');
-    slider.scrollLeft += 1000;
+    if (this.screenWidth <= 576) {
+      this.slider.scrollLeft += 577;
+    } else if (this.screenWidth <= 768) {
+      this.slider.scrollLeft += 769;
+    } else if (this.screenWidth <= 992) {
+      this.slider.scrollLeft += 993;
+    } else if (this.screenWidth <= 1200) {
+      this.slider.scrollLeft += 1201;
+    } else {
+      this.slider.scrollLeft += 1300;
+    }
   }
 
   scrollLeft(): void {
-    const slider = document.getElementById('slider');
-    slider.scrollLeft -= 1000;
+    if (this.screenWidth <= 576) {
+      this.slider.scrollLeft -= 577;
+    } else if (this.screenWidth <= 768) {
+      this.slider.scrollLeft -= 769;
+    } else if (this.screenWidth <= 992) {
+      this.slider.scrollLeft -= 993;
+    } else if (this.screenWidth <= 1200) {
+      this.slider.scrollLeft -= 1201;
+    } else {
+      this.slider.scrollLeft -= 1401;
+    }
   }
 }
